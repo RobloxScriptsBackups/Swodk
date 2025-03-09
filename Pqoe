@@ -1,0 +1,846 @@
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local Whitelist = { "33qqr", "SIGMAZo02", "xgresqax", "soon" }
+
+local function isWhitelisted(player)
+    for _, name in ipairs(Whitelist) do
+        if player.Name == name then
+            return true
+        end
+    end
+    return false
+end
+
+if not isWhitelisted(LocalPlayer) then
+    game.Players.LocalPlayer:Kick("sorry vro, you are not whitelisted to use dis script :)")
+end
+
+local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
+
+local Window = OrionLib:MakeWindow({
+    Name = "Private Gui *Remake* 1.50",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "Name" -- Put the name of your hub or script here!
+})
+
+local Tab = Window:MakeTab({
+    Name = "Logos",
+    Icon = "rbxassetid://123102249464118",
+    PremiumOnly = false
+})
+ 
+Tab:AddButton({
+    Name = "Inject Stigma Ultimate Logo",
+    Callback = function()
+        local gui2 = Instance.new("ScreenGui")
+gui2.Name = "2"
+gui2.Parent = game.CoreGui
+
+local lel2 = Instance.new("ImageLabel")
+lel2.Size = UDim2.new(0.0, 100, 0.0, 100)
+lel2.Position = UDim2.new(-0.127000004, 0, 0.407999992, 0)
+lel2.BackgroundColor3 = Color3.new(0, 0, 0)
+lel2.ImageColor3 = Color3.new(1, 1, 1)
+lel2.Image = "rbxassetid://105260141833384"
+lel2.ImageTransparency = 0
+lel2.Parent = gui2
+
+lel2.BackgroundTransparency = 1 
+
+local Ring2 = Instance.new("ImageLabel")
+Ring2.Size = UDim2.new(1.0, 0, 1.0, 0)
+Ring2.Position = UDim2.new(0.0, 0, 0.0, 0)
+Ring2.BackgroundColor3 = Color3.new(0, 0, 0)
+Ring2.ImageColor3 = Color3.new(1, 1, 1)
+Ring2.Image = "rbxassetid://0"
+Ring2.ImageTransparency = 0
+Ring2.Parent = lel2
+
+Ring2.BackgroundTransparency = 1
+
+local Orbit2 = Instance.new("ImageLabel")
+Orbit2.Size = UDim2.new(0.0, 21, 0.0, 21)
+Orbit2.Position = UDim2.new(0.0, 0, 0.0, 10)
+Orbit2.BackgroundColor3 = Color3.new(0, 0, 0)
+Orbit2.ImageColor3 = Color3.new(1, 1, 1)
+Orbit2.Image = "rbxassetid://0"
+Orbit2.ImageTransparency = 0
+Orbit2.Parent = Ring2
+
+Orbit2.BackgroundTransparency = 1
+
+lel2:TweenPosition(UDim2.new(0.458, 0, 0.408, 0), "Out", "Linear", 0.4, false)
+wait(3)
+lel2:TweenPosition(UDim2.new(0.0, 9, 0.0, 190), "Out", "Sine", 0.7, false)
+
+local gui = Instance.new("ScreenGui")
+gui.Name = "1"
+gui.Parent = game.CoreGui
+
+-- Crear lel (imagen principal) en CoreGui
+local lel = Instance.new("ImageLabel")
+lel.Size = UDim2.new(0, 100, 0, 100)
+lel.Position = UDim2.new(0.458, 0, 0.408, 0)
+lel.BackgroundTransparency = 1
+lel.Image = "rbxassetid://130047672116642"
+lel.Parent = gui
+
+local Ring = Instance.new("ImageLabel")
+Ring.Size = UDim2.new(1.02, 0, 1.02, 0) 
+Ring.Position = UDim2.new(-0.01, 0, -0.01, 0) 
+Ring.BackgroundTransparency = 1
+Ring.Image = "rbxassetid://7102118272"
+Ring.Parent = lel
+
+local Orbit = Instance.new("ImageLabel")
+Orbit.Size = UDim2.new(0, 20, 0, 20)
+Orbit.Position = UDim2.new(0, 0, 0, 10)
+Orbit.BackgroundTransparency = 1
+Orbit.Image = "rbxassetid://7101990169"
+Orbit.Parent = Ring
+
+-- Movimiento de lel
+lel:TweenPosition(UDim2.new(0.458, 0, 0.408, 0), "Out", "Linear", 0.4, false)
+wait(3)
+lel:TweenPosition(UDim2.new(0, 9, 0, 190), "Out", "Sine", 0.7, false)
+
+-- Animación de desaparición y aparición de lel (2 veces seguidas)
+spawn(function()
+    while true do
+        -- Desaparecer lel (primer ciclo)
+        for i = 0, 1, 0.1 do
+            lel.ImageTransparency = i
+            wait(0.03) -- 0.5 segundos para desaparecer
+        end
+        -- Aparecer lel (primer ciclo)
+        for i = 1, 0, -0.1 do
+            lel.ImageTransparency = i
+            wait(0.03) -- 0.5 segundos para aparecer
+        end
+        
+        for i = 0, 1, 0.1 do
+            lel.ImageTransparency = i
+            wait(0.03) -- 0.5 segundos para desaparecer
+        end
+        for i = 1, 0, -0.1 do
+            lel.ImageTransparency = i
+            wait(0.03)
+        end
+
+        wait(10) -- Esperar 10 segundos antes de repetir la animación
+    end
+end)
+
+-- Animación de rotación que ocurre junto con lel
+spawn(function()
+    while wait() do
+        Ring.Rotation = Ring.Rotation + 1
+        Orbit.Rotation = Orbit.Rotation - 1
+    end
+end)
+  end    
+})
+
+Tab:AddButton({
+    Name = "Inject Project Ligma Logo",
+    Callback = function()
+        local gui = Instance.new("ScreenGui")
+gui.Name = "Project Ligma Logo"
+gui.Parent = game.CoreGui
+
+local lel = Instance.new("ImageLabel")
+lel.Size = UDim2.new(0.0, 95, 0.0, 95)
+lel.Position = UDim2.new(-0.127000004, 0, 0.407999992, 0)
+lel.BackgroundColor3 = Color3.new(0, 0, 0)
+lel.ImageColor3 = Color3.new(1, 1, 1)
+lel.Image = "rbxassetid://87162794"
+lel.ImageTransparency = 0
+lel.Parent = gui
+
+lel.BackgroundTransparency = 1 
+
+local Ring = Instance.new("ImageLabel")
+Ring.Size = UDim2.new(1.0, 0, 1.0, 0)
+Ring.Position = UDim2.new(0.0, 0, 0.0, 0)
+Ring.BackgroundColor3 = Color3.new(0, 0, 0)
+Ring.ImageColor3 = Color3.new(1, 1, 1)
+Ring.Image = "rbxassetid://NoNeed"
+Ring.ImageTransparency = 0
+Ring.Parent = lel
+
+Ring.BackgroundTransparency = 1
+
+local Orbit = Instance.new("ImageLabel")
+Orbit.Size = UDim2.new(0.0, 21, 0.0, 21)
+Orbit.Position = UDim2.new(0.0, 0, 0.0, 10)
+Orbit.BackgroundColor3 = Color3.new(0, 0, 0)
+Orbit.ImageColor3 = Color3.new(1, 1, 1)
+Orbit.Image = "rbxassetid://NoNeed"
+Orbit.ImageTransparency = 0
+Orbit.Parent = Ring
+
+Orbit.BackgroundTransparency = 1
+
+lel:TweenPosition(UDim2.new(0.458, 0, 0.408, 0), "Out", "Linear", 0.4, false)
+wait(3)
+lel:TweenPosition(UDim2.new(0.0, 9, 0.0, 190), "Out", "Sine", 0.7, false)
+
+while wait() do
+    Ring.Rotation = Ring.Rotation + 1
+    Orbit.Rotation = Orbit.Rotation - 1
+end
+  end
+})
+
+Tab:AddButton({
+    Name = "Inject Project Shiba Logo",
+    Callback = function()
+        local gui = Instance.new("ScreenGui")
+gui.Name = "Shiba"
+gui.Parent = game.CoreGui
+
+local lel = Instance.new("ImageLabel")
+lel.Size = UDim2.new(0, 100, 0, 100)
+lel.Position = UDim2.new(-0.127, 0, 0.408, 0)
+lel.BackgroundTransparency = 1
+lel.Image = "rbxassetid://116377900005744"
+lel.Parent = gui
+
+local Ring = Instance.new("ImageLabel")
+Ring.Size = UDim2.new(1.1, 0, 1.1, 0) 
+Ring.Position = UDim2.new(-0.05, 0, -0.05, 0) 
+Ring.BackgroundTransparency = 1
+Ring.Image = "rbxassetid://92150751883415"
+Ring.Parent = lel
+
+local Orbit = Instance.new("ImageLabel")
+Orbit.Size = UDim2.new(0, 23, 0, 23)
+Orbit.Position = UDim2.new(0, 0, 0, 10)
+Orbit.BackgroundTransparency = 1
+Orbit.Image = "rbxassetid://132234072935047"
+Orbit.Parent = Ring
+
+lel:TweenPosition(UDim2.new(0.458, 0, 0.408, 0), "Out", "Linear", 0.4, false)
+wait(3)
+lel:TweenPosition(UDim2.new(0, 9, 0, 190), "Out", "Sine", 0.7, false)
+
+while wait() do
+    Ring.Rotation = Ring.Rotation + 1
+    Orbit.Rotation = Orbit.Rotation - 1
+end
+  end
+})
+
+Tab:AddButton({
+    Name = "Inject Project SadRc7 Logo",
+    Callback = function()
+        local gui = Instance.new("ScreenGui")
+gui.Name = "SadRc7"
+gui.Parent = game.CoreGui
+
+local lel = Instance.new("ImageLabel")
+lel.Size = UDim2.new(0.0, 100, 0.0, 100)
+lel.Position = UDim2.new(-0.127000004, 0, 0.407999992, 0)
+lel.BackgroundColor3 = Color3.new(0, 0, 0)
+lel.ImageColor3 = Color3.new(1, 1, 1)
+lel.Image = "rbxassetid://70748217163188"
+lel.ImageTransparency = 0
+lel.Parent = gui
+
+lel.BackgroundTransparency = 1 
+
+local Ring = Instance.new("ImageLabel")
+Ring.Size = UDim2.new(1.0, 0, 1.0, 0)
+Ring.Position = UDim2.new(0.0, 0, 0.0, 0)
+Ring.BackgroundColor3 = Color3.new(0, 0, 0)
+Ring.ImageColor3 = Color3.new(1, 1, 1)
+Ring.Image = "rbxassetid://75666015418210"
+Ring.ImageTransparency = 0
+Ring.Parent = lel
+
+Ring.BackgroundTransparency = 1
+
+local Orbit = Instance.new("ImageLabel")
+Orbit.Size = UDim2.new(0.0, 21, 0.0, 21)
+Orbit.Position = UDim2.new(0.0, 0, 0.0, 10)
+Orbit.BackgroundColor3 = Color3.new(0, 0, 0)
+Orbit.ImageColor3 = Color3.new(1, 1, 1)
+Orbit.Image = "rbxassetid://126867573668330"
+Orbit.ImageTransparency = 0
+Orbit.Parent = Ring
+
+Orbit.BackgroundTransparency = 1
+
+lel:TweenPosition(UDim2.new(0.458, 0, 0.408, 0), "Out", "Linear", 0.4, false)
+wait(3)
+lel:TweenPosition(UDim2.new(0.0, 9, 0.0, 190), "Out", "Sine", 0.7, false)
+
+while wait() do
+Ring.Rotation = Ring.Rotation + 1
+Orbit.Rotation = Orbit.Rotation - 1
+end
+  end    
+})
+
+local Scripts = Window:MakeTab({
+    Name = "Scripts",
+    Icon = "rbxassetid://107461983050633",
+    PremiumOnly = false
+})
+
+Scripts:AddButton({
+    Name = "R15 To R6",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Imagnir/r6_anims_for_r15/main/r6_anims.lua", true))()("Copyright ERROR_CODE ECCS Co")
+  end
+})
+
+Scripts:AddButton({
+    Name = "Big Smoke R6 (Needs Keyboard)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxScriptsBackups/Big-Smoke/refs/heads/main/meH2UqM2.txt",true))()
+  end
+})
+
+Scripts:AddButton({
+    Name = "MLG 2520 Gun R6 (Needs Keyboard)",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Client-Replication-the-ss-loadstring-script-27393"))()
+  end
+})
+
+local Guis = Window:MakeTab({
+    Name = "Guis",
+    Icon = "rbxassetid://125209065827362",
+    PremiumOnly = false
+})
+
+Guis:AddButton({
+    Name = "Ro-Xploit 6.0 (With Everything, laggy on big games)",
+    Callback = function()
+        loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-RoXploit-by-KrystalTeam-9328"))()
+  end
+})
+
+Guis:AddButton({
+    Name = "Ro-Xploit 6.0 (Removed features, Not Laggy)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxScriptsBackups/Roxlplofjdo9wifk6m0/refs/heads/main/Ro-Xploit6.0-By-KrystalTeam.txt",true))()
+  end
+})
+
+Guis:AddButton({
+    Name = "RC7",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CoreGui/Scripts/main/RC7"))()
+  end
+})
+
+Guis:AddButton({
+    Name = "young Shelon gui",
+    Callback = function()
+        local gui = Instance.new("ScreenGui")
+gui.Name = "Young shelon gui update"
+gui.Parent = game.CoreGui
+
+local Ui = Instance.new("Frame")
+Ui.Size = UDim2.new(0.0, 489, 0.0, 300)
+Ui.Position = UDim2.new(0.0, 0, 0.0, 0)
+Ui.BackgroundColor3 = Color3.new(1, 1, 1)
+Ui.BorderColor3 = Color3.new(0, 0, 0)
+Ui.BorderSizePixel = 0
+Ui.Active = true
+Ui.BackgroundTransparency = 0.6
+Ui.Draggable = true
+Ui.Parent = gui
+
+local Image = Instance.new("ImageLabel")
+Image.Size = UDim2.new(1.004, 0, 1.0, 0)
+Image.Position = UDim2.new(0.0, 0, 0.0, 0)
+Image.BackgroundColor3 = Color3.new(0, 0, 0)
+Image.ImageColor3 = Color3.new(1, 1, 1)
+Image.Image = "rbxassetid://14902240136"
+Image.ImageTransparency = 0.4
+Image.Parent = Ui
+
+Image.BackgroundTransparency = 1
+
+local Text = Instance.new("TextLabel")
+Text.Size = UDim2.new(1.0, 0, 0.1, 20)
+Text.Position = UDim2.new(0.0, 0, 0.0, 0)
+Text.BackgroundColor3 = Color3.new(0, 0, 0)
+Text.BorderColor3 = Color3.new(0, 0, 0)
+Text.BorderSizePixel = 1
+Text.Text = "young Shelon gui"
+Text.BackgroundTransparency = 1
+Text.TextColor3 = Color3.new(0, 0, 0)
+Text.Font = Enum.Font.Highway
+Text.Parent = Image
+Text.TextSize = 30
+
+local TextBox = Instance.new("TextBox")
+TextBox.Size = UDim2.new(0.6, 29, 0.7, 7)
+TextBox.Position = UDim2.new(0.0, 4, 0.0, 45)
+TextBox.BackgroundColor3 = Color3.new(1, 1, 1)
+TextBox.BorderColor3 = Color3.new(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Text = ""
+TextBox.PlaceholderText = "Execute His Thoughts"
+TextBox.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextColor3 = Color3.new(0, 0, 0)
+TextBox.BackgroundTransparency = 0.4
+TextBox.Font = Enum.Font.SpecialElite
+TextBox.TextSize = 18
+TextBox.Parent = Image
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.ClearTextOnFocus = failed
+TextBox.MultiLine = true
+TextBox.TextWrapped = true
+
+local Exe = Instance.new("TextButton")
+Exe.Size = UDim2.new(0.1, 22, 0.1, 0)
+Exe.Position = UDim2.new(0.0, 4, 0.0, 266)
+Exe.BackgroundColor3 = Color3.new(1, 1, 1)
+Exe.BorderColor3 = Color3.new(0, 0, 0)
+Exe.BorderSizePixel = 0
+Exe.Text = "exe"
+Exe.BackgroundTransparency = 0.1
+Exe.TextColor3 = Color3.new(0, 0, 0)
+Exe.Font = Enum.Font.Montserrat
+Exe.Parent = Image
+Exe.TextSize = 21
+Exe.MouseButton1Click:Connect(function()
+assert(loadstring(TextBox.Text))()
+end)
+
+local clea = Instance.new("TextButton")
+clea.Size = UDim2.new(0.1, 22, 0.1, 0)
+clea.Position = UDim2.new(0.1, 31, 0.0, 266)
+clea.BackgroundColor3 = Color3.new(1, 1, 1)
+clea.BorderColor3 = Color3.new(0, 0, 0)
+clea.BorderSizePixel = 0
+clea.Text = "clear"
+clea.BackgroundTransparency = 0.1
+clea.TextColor3 = Color3.new(0, 0, 0)
+clea.Font = Enum.Font.Montserrat
+clea.Parent = Image
+clea.TextSize = 21
+clea.MouseButton1Click:Connect(function()
+TextBox.Text = ""
+end)
+
+local Re = Instance.new("TextButton")
+Re.Size = UDim2.new(0.1, 22, 0.1, 0)
+Re.Position = UDim2.new(0.3, 8, 0.0, 266)
+Re.BackgroundColor3 = Color3.new(1, 1, 1)
+Re.BorderColor3 = Color3.new(0, 0, 0)
+Re.BorderSizePixel = 0
+Re.Text = "R6"
+Re.BackgroundTransparency = 0.1
+Re.TextColor3 = Color3.new(0, 0, 0)
+Re.Font = Enum.Font.Montserrat
+Re.Parent = Image
+Re.TextSize = 21
+Re.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet("https://pastebin.com/raw/9BFcHqfK"))("Copyright ERROR_CODE ECCS Co")
+end)
+
+local R6 = Instance.new("TextButton")
+R6.Size = UDim2.new(0.1, 22, 0.1, 0)
+R6.Position = UDim2.new(0.4, 35, 0.0, 266)
+R6.BackgroundColor3 = Color3.new(1,1, 1)
+R6.BorderColor3 = Color3.new(0, 0, 0)
+R6.BorderSizePixel = 0
+R6.Text = "Re"
+R6.BackgroundTransparency = 0.1
+R6.TextColor3 = Color3.new(0, 0, 0)
+R6.Font = Enum.Font.Montserrat
+R6.Parent = Image
+R6.TextSize = 23
+R6.MouseButton1Click:Connect(function()
+if game.Players.LocalPlayer.Character then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+end)
+
+local Scr = Instance.new("ScrollingFrame")
+Scr.Size = UDim2.new(0.3, 7, 0.5, 39)
+Scr.Position = UDim2.new(0.0, 332, 0.0, 72)
+Scr.BackgroundColor3 = Color3.new(1, 1, 1)
+Scr.BorderColor3 = Color3.new(0, 0, 0)
+Scr.BorderSizePixel = 0
+Scr.Parent = Image
+Scr.ScrollBarThickness = 0
+
+Scr.BackgroundTransparency = 1
+
+local Jojo = Instance.new("TextButton")
+Jojo.Size = UDim2.new(0.9, 19, 0.0, 25)
+Jojo.Position = UDim2.new(0.0, 0, 0.0, 0)
+Jojo.BackgroundColor3 = Color3.new(1, 1, 1)
+Jojo.BorderColor3 = Color3.new(0, 0, 0)
+Jojo.BorderSizePixel = 0
+Jojo.Text = "Goku"
+Jojo.BackgroundTransparency = 0.3
+Jojo.TextColor3 = Color3.new(0, 0, 0)
+Jojo.Font = Enum.Font.Montserrat
+Jojo.Parent = Scr
+Jojo.TextSize = 19
+
+local Deku = Instance.new("TextButton")
+Deku.Size = UDim2.new(0.9, 19, 0.0, 25)
+Deku.Position = UDim2.new(0.0, 0, 0.0, 29)
+Deku.BackgroundColor3 = Color3.new(1, 1, 1)
+Deku.BorderColor3 = Color3.new(0, 0, 0)
+Deku.BorderSizePixel = 0
+Deku.Text = "Deku"
+Deku.BackgroundTransparency = 0.3
+Deku.TextColor3 = Color3.new(0, 0, 0)
+Deku.Font = Enum.Font.Montserrat
+Deku.Parent = Scr
+Deku.TextSize = 19
+
+local KJ = Instance.new("TextButton")
+KJ.Size = UDim2.new(0.9, 19, 0.0, 25)
+KJ.Position = UDim2.new(0.0, 0, 0.0, 58)
+KJ.BackgroundColor3 = Color3.new(1, 1, 1)
+KJ.BorderColor3 = Color3.new(0, 0, 0)
+KJ.BorderSizePixel = 0
+KJ.Text = "KJ"
+KJ.BackgroundTransparency = 0.3
+KJ.TextColor3 = Color3.new(0, 0, 0)
+KJ.Font = Enum.Font.Montserrat
+KJ.Parent = Scr
+KJ.TextSize = 19
+
+local Minos = Instance.new("TextButton")
+Minos.Size = UDim2.new(0.9, 19, 0.0, 25)
+Minos.Position = UDim2.new(0.0, 0, 0.0, 88)
+Minos.BackgroundColor3 = Color3.new(1, 1, 1)
+Minos.BorderColor3 = Color3.new(0, 0, 0)
+Minos.BorderSizePixel = 0
+Minos.Text = "Minos"
+Minos.BackgroundTransparency = 0.3
+Minos.TextColor3 = Color3.new(0, 0, 0) 
+Minos.Font = Enum.Font.Montserrat
+Minos.Parent = Scr
+Minos.TextSize = 19
+
+local Jojo1 = Instance.new("TextButton")
+Jojo1.Size = UDim2.new(0.9, 19, 0.0, 25)
+Jojo1.Position = UDim2.new(0.0, 0, 0.0, 118)
+Jojo1.BackgroundColor3 = Color3.new(1, 1, 1)
+Jojo1.BorderColor3 = Color3.new(0, 0, 0)
+Jojo1.BorderSizePixel = 0
+Jojo1.Text = "Jojo"
+Jojo1.BackgroundTransparency = 0.3
+Jojo1.TextColor3 = Color3.new(0, 0, 0)
+Jojo1.Font = Enum.Font.Montserrat
+Jojo1.Parent = Scr
+Jojo1.TextSize = 19
+
+local Cashx = Instance.new("TextButton")
+Cashx.Size = UDim2.new(0.9, 19, 0.0, 25)
+Cashx.Position = UDim2.new(0.0, 0, 0.0, 148)
+Cashx.BackgroundColor3 = Color3.new(1, 1, 1)
+Cashx.BorderColor3 = Color3.new(0, 0, 0)
+Cashx.BorderSizePixel = 0
+Cashx.Text = "Chad"
+Cashx.BackgroundTransparency = 0.3
+Cashx.TextColor3 = Color3.new(0, 0, 0)
+Cashx.Font = Enum.Font.Montserrat
+Cashx.Parent = Scr
+Cashx.TextSize = 19
+
+local Gojo = Instance.new("TextButton")
+Gojo.Size = UDim2.new(0.9, 19, 0.0, 25)
+Gojo.Position = UDim2.new(0.0, 0, 0.0, 178)
+Gojo.BackgroundColor3 = Color3.new(1, 1, 1)
+Gojo.BorderColor3 = Color3.new(0, 0, 0)
+Gojo.BorderSizePixel = 0
+Gojo.Text = "Gojo"
+Gojo.BackgroundTransparency = 0.3
+Gojo.TextColor3 = Color3.new(0, 0, 0)
+Gojo.Font = Enum.Font.Montserrat
+Gojo.Parent = Scr
+Gojo.TextSize = 19
+
+local sec = Instance.new("TextBox")
+sec.Size = UDim2.new(0.3, 7, 0.0, 25)
+sec.Position = UDim2.new(0.0, 332, 0.0, 45)
+sec.BackgroundColor3 = Color3.new(1, 1, 1)
+sec.BorderColor3 = Color3.new(0, 0, 0)
+sec.BorderSizePixel = 0
+sec.Text = ""
+sec.TextColor3 = Color3.new(0, 0, 0)
+sec.BackgroundTransparency = 0.3
+sec.Font = Enum.Font.Montserrat
+sec.TextSize = 15
+sec.Parent = Image
+sec.PlaceholderText = "search"
+sec.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
+sec.TextSize = 21
+
+local command = Instance.new("TextBox")
+command.Size = UDim2.new(0.3, 29, 0.1, 0)
+command.Position = UDim2.new(0.5, 64, 0.0, 266)
+command.BackgroundColor3 = Color3.new(1, 1, 1)
+command.BorderColor3 = Color3.new(0, 0, 0)
+command.BorderSizePixel = 0
+command.Text = ""
+command.TextColor3 = Color3.new(0, 0, 0)
+command.BackgroundTransparency = 0.3
+command.Font = Enum.Font.Code
+command.TextSize = 15
+command.Parent = Image
+command.PlaceholderText = "command bar"
+command.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
+command.TextSize = 21
+
+local lel = Instance.new("ImageLabel")
+lel.Size = UDim2.new(0.0, 100, 0.0, 100)
+lel.Position = UDim2.new(-0.127000004, 0, 0.407999992, 0)
+lel.BackgroundColor3 = Color3.new(0, 0, 0)
+lel.ImageColor3 = Color3.new(1, 1, 1)
+lel.Image = "rbxassetid://146470272"
+lel.ImageTransparency = 0
+lel.Parent = gui
+
+lel.BackgroundTransparency = 1 
+
+local Ring = Instance.new("ImageLabel")
+Ring.Size = UDim2.new(1.0, 0, 1.0, 0)
+Ring.Position = UDim2.new(0.0, 0, 0.0, 0)
+Ring.BackgroundColor3 = Color3.new(0, 0, 0)
+Ring.ImageColor3 = Color3.new(1, 1, 1)
+Ring.Image = "rbxassetid://7102118272"
+Ring.ImageTransparency = 0
+Ring.Parent = lel
+
+Ring.BackgroundTransparency = 1
+
+local Orbit = Instance.new("ImageLabel")
+Orbit.Size = UDim2.new(0.0, 21, 0.0, 21)
+Orbit.Position = UDim2.new(0.0, 0, 0.0, 10)
+Orbit.BackgroundColor3 = Color3.new(0, 0, 0)
+Orbit.ImageColor3 = Color3.new(1, 1, 1)
+Orbit.Image = "rbxassetid://15654878092"
+Orbit.ImageTransparency = 0
+Orbit.Parent = Ring
+
+Orbit.BackgroundTransparency = 1
+
+lel:TweenPosition(UDim2.new(0.458, 0, 0.408, 0), "Out", "Linear", 0.4, false)
+wait(3)
+lel:TweenPosition(UDim2.new(0.0, 9, 0.0, 190), "Out", "Sine", 0.7, false)
+
+while wait() do
+Ring.Rotation = Ring.Rotation + 1
+Orbit.Rotation = Orbit.Rotation - 1
+end
+  end
+})
+
+Guis:AddButton({
+    Name = "Dominant Executor",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/oiEePFEq/raw",true))()
+  end
+})
+
+Guis:AddButton({
+    Name = "T0PK3K 4.0",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/c-1-23/c-1-23/refs/heads/main/T0PK3K%204.0"))()
+  end
+})
+
+Guis:AddButton({
+    Name = "Polaria",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/OMpfgPqh/raw",true))()
+  end
+})
+
+Guis:AddButton({
+    Name = "*REAL* Polaria (GLITCHED) (more broken than me)",
+    Callback = function()
+        game:GetObjects("rbxassetid://123255432303221")[1].Parent = game.Players.LocalPlayer.PlayerGui
+  end
+})
+
+local Tools = Window:MakeTab({
+    Name = "Tool Scripts",
+    Icon = "rbxassetid://109328327493086",
+    PremiumOnly = false
+})
+
+Tools:AddButton({
+    Name = "Telekinesis V6",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty1.lua"))()
+  end
+})
+
+Tools:AddButton({
+    Name = "TP Tool",
+    Callback = function()
+        -- Teleport Tool Script
+local ToolName = "Teleport Tool"
+
+local function createTool()
+    -- Create the tool
+    local tool = Instance.new("Tool")
+    tool.Name = ToolName
+    tool.RequiresHandle = false
+    tool.CanBeDropped = false
+
+    -- Add the tool to the player’s backpack
+    tool.Parent = game.Players.LocalPlayer.Backpack
+
+    -- Teleport on activation
+    tool.Activated:Connect(function()
+        local player = game.Players.LocalPlayer
+        local mouse = player:GetMouse()
+        local targetPos = mouse.Hit.p
+
+        -- Teleport the player to the mouse position
+        player.Character:MoveTo(targetPos)
+    end)
+end
+
+-- Function to handle respawning the tool
+local function onCharacterAdded(character)
+    createTool()
+end
+
+-- Set up tool and handle respawning
+game.Players.LocalPlayer.CharacterAdded:Connect(onCharacterAdded)
+createTool()
+  end
+})
+
+Tools:AddButton({
+    Name = "Speed Boost Tool",
+    Callback = function()
+        local tool = script.Parent
+local handle = tool:FindFirstChild("Handle")
+local speedBoost = 50
+local normalSpeed = 16
+
+tool.Equipped:Connect(function()
+    local character = tool.Parent
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if humanoid then
+        humanoid.WalkSpeed = speedBoost
+    end
+end)
+
+tool.Unequipped:Connect(function()
+    local character = tool.Parent
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if humanoid then
+        humanoid.WalkSpeed = normalSpeed
+    end
+end)
+
+if handle then
+    handle.Touched:Connect(function(hit)
+        -- Puedes agregar efectos o sonidos aquí si quieres
+    end)
+end
+  end
+})
+
+Tools:AddButton({
+    Name = "Gravity Tool",
+    Callback = function()
+        local tool = script.Parent
+local handle = tool:FindFirstChild("Handle")
+local lowGravity = 25
+local normalGravity = 196.2
+
+tool.Equipped:Connect(function()
+    local character = tool.Parent
+    local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+    if humanoidRootPart then
+        humanoidRootPart.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+        game.Workspace.Gravity = lowGravity
+    end
+end)
+
+tool.Unequipped:Connect(function()
+    game.Workspace.Gravity = normalGravity
+end)
+
+if handle then
+    handle.Touched:Connect(function(hit)
+        -- Puedes agregar efectos o sonidos aquí si quieres
+    end)
+end
+  end
+})
+
+local Misc = Window:MakeTab({
+    Name = "Misc",
+    Icon = "rbxassetid://86052641052950",
+    PremiumOnly = false
+})
+
+Misc:AddButton({
+    Name = "test",
+    Callback = function()
+        print("Success")
+  end
+})
+
+local Changelogs = Window:MakeTab({
+    Name = "ChangeLogs",
+    Icon = "rbxassetid://93280513616728",
+    PremiumOnly = false
+})
+
+local Section6 = Changelogs:AddSection({
+    Name = "Private Gui *Remake* 1.50"
+})
+
+local Section5 = Changelogs:AddSection({
+    Name = "📌 ChangeLogs:"
+})
+
+local Section4 = Changelogs:AddSection({
+    Name = "🆕 What's New?"
+})
+
+local Section3 = Changelogs:AddSection({
+    Name = "✅ Scripts Organized"
+})
+
+local Section2 = Tut:AddSection({
+    Name = "✅ More New Scripts Added"
+})
+
+local Section1 = Changelogs:AddSection({
+    Name = "✅ Fixed Some Scripts Not Loading"
+})
+
+local Tut = Window:MakeTab({
+    Name = "Credits",
+    Icon = "rbxassetid://87162794",
+    PremiumOnly = false
+})
+
+local Section01 = Tut:AddSection({
+    Name = "Script Made with Love ♥️ by 33qqr (@EXPTR on tiktok)"
+})
+
+local Section01 = Tut:AddSection({
+    Name = "hope ya enjoy this super duper insanely cool gui"
+})
+
+local Section0 = Tut:AddSection({
+    Name = "Whitelisted People: 33qqr (owner), SIGMAZo02, xgresqax"
+})
